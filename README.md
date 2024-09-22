@@ -53,9 +53,18 @@ Amazon CloudWatch is a monitoring and observability service provided by AWS that
 * Connect to EC2 instance by preferred option which navigates to the EC2 CLI
 **Enable the EPEL repository by:**
 1. Install the EPEL repository, which contains the ***stress*** package bu imputting the command:
-   ```sudo amazon-linux-extras install epel ```
-2. Once the EPEL repository is enabled, you can install the stress tool:
-   ``` sudo yum install stress -y ```
+   ```
+   sudo amazon-linux-extras install epel
+   ```
+2. Once the EPEL repository is enabled, you can install the ***stress*** tool:
+   ```
+   sudo yum install stress -y
+    ```
+3. After the installation is complete, you can run the ***stress*** command to create high CPU usage.
+   ```
+   stress --cpu 8 --timeout 600
+   ```
+* Wait to receive the alarm email when the CPU usage goes above the set threshold.
   
 
 
